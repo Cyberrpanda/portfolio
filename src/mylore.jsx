@@ -1,4 +1,5 @@
 import "./index.css";
+import 'animate.css';
 
 export default function Lore() {
 

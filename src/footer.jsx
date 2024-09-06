@@ -53,7 +53,7 @@ export default function Footer(){
 
        <div className="footcontent ">
         
-        <span className="exempt">
+        <span className="">
         <h6>Location</h6>
         <br />
         <p>In case you're wondering i live in Lagos, Nigeria. <br />You'll find me probably bent over a screen staring 😂.  <br />

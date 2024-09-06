@@ -518,12 +518,19 @@ header .nav-btn {
   color: #213739;
   height: auto;
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: visible;
+  position: relative;
 }
 
 .footcontent {
   padding: 35px;
 }
+
+h3 {
+  animation: bounce;
+  animation-duration: 3s;
+}
+
 
 
 @media only screen and (max-width: 1024px) {
@@ -618,7 +625,9 @@ header .nav-btn {
     width: 100%;
   }
 
-  
+  .exempt{
+    display: none;
+  }
 
 }
 @media only screen and (max-width: 820px) {
@@ -711,6 +720,10 @@ header .nav-btn {
 
   .cards{
     width: 100%;
+  }
+
+  .exempt{
+    display: none;
   }
 
 }
@@ -809,6 +822,11 @@ header .nav-btn {
 
   .exempt{
     display: none;
+  }
+
+  footer {
+    height: auto;
+    overflow: visible;
   }
 }
 
