@@ -47,6 +47,25 @@ export default function Educate(){
                         </div>
                     </div>
                 </div>    
+          
+                <h3>
+                <i>PUBLICATIONS</i>
+                </h3>
+                <br />
+                <br />
+                <div className="certificate">
+                <iframe className=""
+                    src="https://drive.google.com/file/d/1WSjDfJPJi9j4gfC_JhybkM2nKLKZw5ZM/preview
+"
+                    width="640"
+                    height="450"
+                    allow="autoplay"
+                    title="Certificate PDF"
+                    style={{ border: "none" }}>
+
+                </iframe>
+                <p>Certificate of Publication - Issued by International Journal <br /> of Scientific Research and Engineering Development (IJSRED)</p>
+                </div>
 
         </div>
         </>

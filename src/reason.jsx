@@ -3,7 +3,7 @@ import "./index.css";
 export default function Reason(){
     return (
         <>
-         <div className="reason">
+         <div className="reason" id="reason">
                 <h3> 
                     <i>EXPERIENCE</i>
                 </h3>

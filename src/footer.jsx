@@ -9,54 +9,61 @@ export default function Footer(){
        <div className="footcontent">
     
         <p>
-          <h1>Ventures</h1>
+          <h1>My Portfolio</h1>
           <br />
-          Travel with us...</p>
+          I Guess 😂
+          <br />
+          <br />
+          Work with me...</p>
        </div>
 
         <div className="footcontent">
-              <h6>Site Content</h6>
+              <h6>Contact Me</h6>
               <br />
               <ul>
-                <li>Lorem ipsum </li>
+                <a href="https://www.linkedin.com/in/ithiel-balogun-09aa87242"><li>Linkedln</li></a>
                 <br />
-                <li>Lorem ipsum </li>
-                <br />
-                <li className="footexe">Lorem ipsum </li>
-                <br />
-                <li className="footexe">Lorem ipsum </li>
-                <br />
+                <a href="https://github.com/Cyberrpanda"><li>Github </li></a>
                 
+                <br />  
               </ul>
+              <h6>Email:</h6>
+              <p>ithielb9@gmail.com</p>
         </div>
 
 
-        <div className="footcontent footexe">
+        <div className="footcontent exempt">
 
-            <h6>Our Services</h6>
+            <h6>Page Content</h6>
               <br />
               <ul>
-                <li>Lorem ipsum </li>
+                <li>Home</li>
                 <br />
-                <li>Lorem ipsum </li>
+                <li>About</li>
                 <br />
-                <li>Lorem ipsum </li>
+                <li>Skills</li>
                 <br />
-                <li>Lorem ipsum </li>
+                <li>Projects</li>
                 <br />
-                
+                <li>Experience</li>
               </ul>
 
         </div>
 
 
-       <div className="footcontent footexe">
+       <div className="footcontent ">
         
-        <h6>Join Our Newsletter</h6>
+        <span className="exempt">
+        <h6>Location</h6>
         <br />
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing <br />elit. Aut veniam a provident cum <br />
-        molestias accusamus id,</p>
-
+        <p>In case you're wondering i live in Lagos, Nigeria. <br />You'll find me probably bent over a screen staring 😂.  <br />
+        This shouldn't bother you too much right.  </p>
+        <br />
+        </span>
+        
+        <h6>Phone Numbers:</h6>
+        <p>Whatsapp Number: 08185817626</p>
+        <p>Mobile Number: 09168728729</p>
        </div>
      </div>
 

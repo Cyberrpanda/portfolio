@@ -7,11 +7,13 @@ import Stack from './stack';
 import Flex from './flex';
 import Reason from './reason';
 import Educate from './educate';
+import Showcase from './showcase';
+import Contact from './contactinfo';
 
 export default function Home () {
    return (
     <>
-       <div className="opening">
+       <div className="opening" id="home">
         <Navbar />
         <div className="">
             <section className=" introtext">
@@ -35,9 +37,13 @@ export default function Home () {
 
        <Flex/>
 
+       <Showcase/>
+
        <Reason/>
 
        <Educate/>
+       
+       <Contact/>
 
       <Footer/>
 

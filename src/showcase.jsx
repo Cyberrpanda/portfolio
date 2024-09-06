@@ -1,12 +1,96 @@
+import React from "react";
+import Slider from "react-slick";
 import "./index.css";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
-export default function Showcase(){
-    return (
-        <>
-           <div className="show">
+export default function Showcase() {
 
+  const settings = {
+    className: "center",
+    centerMode: true,
+    infinite: true,
+    centerPadding: "0px",
+    slidesToShow: 2,
+    speed: 500,
+    responsive:[
+      {
+        breakpoint: 1024,
+        settings:{
+          slidesToShow: 1,
+          centerMode: true,
+          arrows: true,
+        }  
+      },
 
-           </div>
-        </>
-    )
+      {
+        breakpoint: 820,
+        settings:{
+          slidesToShow: 1,
+          centerMode: true,
+          arrows: true,
+        }  
+      },
+
+      {
+        breakpoint: 768,
+        settings:{
+          slidesToShow: 1,
+          centerMode: true,
+          arrows: true,
+        }  
+      },
+
+      {
+        breakpoint: 480,
+        settings:{
+          slidesToShow: 1,
+          centerMode: true,
+        }
+      },
+      {
+        breakpoint: 375,
+        settings:{
+          slidesToShow: 1,
+          centerMode: true,
+          arrows: true,
+        }  
+      }
+      
+    ]
+  };
+
+  return (
+    <>
+      <div className="show" id="showcase">
+        <h3>
+          <i> FEATURED WORK</i>
+        </h3>
+        <br />
+        <br />
+        <div className="slides">
+           <div className="slider-container">
+        <Slider {...settings}>
+          <div>
+            <img src="../medibridge.png" alt="m1" />
+          </div>
+          <div>
+            <img src="../tunken.png" alt="m2" />
+          </div>
+          <div>
+            <img src="../ventures.png" alt="m3" />
+          </div>
+          <div>
+            <img src="../heavy.png" alt="m4" />
+          </div>
+          <div>
+            <img src="../tickfare.png" alt="m5" />
+          </div>
+          
+        </Slider>
+      </div>
+        </div>
+      </div>
+    </>
+  );
 }

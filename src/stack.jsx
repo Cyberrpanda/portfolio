@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 export default function Stack() {
   return (
     <>
-      <div className="stack">
+      <div className="stack" id="stack">
         <h3>
           <i>
             MY <br /> SKILLS
@@ -23,7 +23,7 @@ export default function Stack() {
                 <div class="skillBar">
                 <h4>Css3</h4>
                 <div class="skillBarContainer">
-                    <div class="skillBarValue value-80"></div>
+                    <div class="skillBarValue value-90"></div>
                 </div>
                 </div>
 
@@ -44,14 +44,14 @@ export default function Stack() {
                 <div class="skillBar">
                     <h4>MongoDB</h4>
                     <div class="skillBarContainer">
-                    <div class="skillBarValue value-80"></div>
+                    <div class="skillBarValue value-30"></div>
                     </div>
                 </div>
 
                 <div class="skillBar">
                     <h4>Git/GitHub</h4>
                     <div class="skillBarContainer">
-                    <div class="skillBarValue value-80"></div>
+                    <div class="skillBarValue value-70"></div>
                     </div>
                 </div>
             </div>
@@ -68,7 +68,7 @@ export default function Stack() {
                 <div class="skillBar">
                     <h4>NodeJs</h4>
                     <div class="skillBarContainer">
-                    <div class="skillBarValue value-40"></div>
+                    <div class="skillBarValue value-30"></div>
                     </div>
                 </div>
 
@@ -82,7 +82,7 @@ export default function Stack() {
                 <div class="skillBar">
                     <h4>ExpressJs</h4>
                     <div class="skillBarContainer">
-                    <div class="skillBarValue value-80"></div>
+                    <div class="skillBarValue value-40"></div>
                     </div>
                 </div>
 
