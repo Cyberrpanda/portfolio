@@ -260,6 +260,17 @@ header .nav-btn {
   border-bottom-left-radius: 5px;
 }
 
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.slide-in-left-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .card-heads {
   display: flex;
   justify-content: space-between;

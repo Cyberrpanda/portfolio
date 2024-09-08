@@ -1,6 +1,37 @@
+import { useEffect } from "react";
 import "./index.css";
 
 export default function Reason(){
+
+    useEffect(() => {
+        const cards = document.querySelectorAll(".cardsx");
+    
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("slide-in-left-active");
+              }
+            });
+          },
+          {
+            threshold: 0.2, // Trigger when 20% of the element is visible
+          }
+        );
+    
+        cards.forEach((card) => {
+          observer.observe(card);
+        });
+    
+        return () => {
+          cards.forEach((card) => {
+            observer.unobserve(card);
+          });
+        };
+      }, []);
+    
+
+
     return (
         <>
          <div className="reason" id="reason">
@@ -11,7 +42,7 @@ export default function Reason(){
                 <br />
                 <div className="exp">
                     <div    className="containers details">
-                        <div className="cardsx">
+                        <div className="cardsx slide-in-left">
                         <div className="card-heads">
                         <h5>NIIT LIMITED</h5>
 
@@ -31,7 +62,7 @@ export default function Reason(){
                     </div>
 
                     <div className="containers details">
-                        <div className="cardsx">
+                        <div className="cardsx slide-in-left">
                          <div className="card-heads">
                          <h5>TUNKEN ELEVATORS</h5>
                          <small className="date">SEP 2023 - OCT 2023</small>

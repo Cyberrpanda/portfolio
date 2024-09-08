@@ -1,8 +1,35 @@
+import { useEffect } from "react";
 import "./index.css";
 
 export default function Educate(){
     
-  
+    useEffect(() => {
+        const cards = document.querySelectorAll(".ecards");
+    
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("slide-in-left-active");
+              }
+            });
+          },
+          {
+            threshold: 0.2, // Adjust this value based on when you want the animation to trigger
+          }
+        );
+    
+        cards.forEach((card) => {
+          observer.observe(card);
+        });
+    
+        return () => {
+          cards.forEach((card) => {
+            observer.unobserve(card);
+          });
+        };
+      }, []);
+    
 
 
     return(
@@ -15,7 +42,7 @@ export default function Educate(){
                 <br />
                 <div className="exp">
                     <div className="containers details">
-                        <div className="ecards">
+                        <div className="ecards slide-in-left">
                         <div className="card-heads">
                         <h5>NIIT LIMITED</h5>
 
@@ -34,7 +61,7 @@ export default function Educate(){
                     </div>
 
                     <div className="containers details">
-                        <div className="cardsx">
+                        <div className="ecards slide-in-left">
                          <div className="card-heads">
                          <h5>BSC. COMPUTER SCIENCE</h5>
                          <small className="date">2021 - 2024</small>

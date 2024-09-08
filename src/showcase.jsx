@@ -74,10 +74,14 @@ export default function Showcase() {
            <div className="slider-container">
         <Slider {...settings}>
           <div>
+            <a href="https://medibridge-ty1l.onrender.com">
             <img src="../medibridge.png" alt="m1" />
+            </a>
           </div>
           <div>
+            <a href="https://tunken-project.onrender.com">
             <img src="../tunken.png" alt="m2" />
+            </a>
           </div>
           <div>
             <img src="../ventures.png" alt="m3" />
