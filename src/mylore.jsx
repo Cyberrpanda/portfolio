@@ -1,7 +1,10 @@
 import "./index.css";
-import 'animate.css';
+import React, { useEffect, useRef } from 'react';
+
 
 export default function Lore() {
+  const contentRef = useRef(null);
+
 
   const handleDownload = () => {
     
@@ -11,6 +14,31 @@ export default function Lore() {
     link.click(); 
   };
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.4 } // Adjust the threshold as needed
+    );
+
+    const content = contentRef.current;
+    if (content) {
+      observer.observe(content);
+    }
+
+    return () => {
+      if (content) {
+        observer.unobserve(content);
+      }
+    };
+  }, []);
+
+
   return (
     <>
       <div className="lore" id="mylore">
@@ -19,7 +47,7 @@ export default function Lore() {
         </h3>
         <br />
         <br />
-        <div className="content">
+        <div className="content" ref={contentRef}>
           <img src="/display.jpeg" className="id-picture" alt="id" />
 
           <div className=" container details">

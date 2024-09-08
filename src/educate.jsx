@@ -1,6 +1,10 @@
 import "./index.css";
 
 export default function Educate(){
+    
+  
+
+
     return(
         <>
         <div className="educate">
@@ -10,8 +14,8 @@ export default function Educate(){
                 <br />
                 <br />
                 <div className="exp">
-                    <div    className="containers details">
-                        <div className="cardsx">
+                    <div className="containers details">
+                        <div className="ecards">
                         <div className="card-heads">
                         <h5>NIIT LIMITED</h5>
 
@@ -53,7 +57,7 @@ export default function Educate(){
                 </h3>
                 <br />
                 <br />
-                <div className="certificate">
+                <div className="certificate ">
                 <iframe className=""
                     src="https://drive.google.com/file/d/1WSjDfJPJi9j4gfC_JhybkM2nKLKZw5ZM/preview
 "

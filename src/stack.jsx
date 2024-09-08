@@ -1,7 +1,41 @@
 import "./index.css";
+import React, { useEffect, useRef } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Stack() {
+  
+  const divisionsRef = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.4 } // Adjust the threshold as needed
+    );
+
+    const divisions = divisionsRef.current;
+    divisions.forEach((division) => {
+      if (division) {
+        observer.observe(division);
+      }
+    });
+
+    return () => {
+      divisions.forEach((division) => {
+        if (division) {
+          observer.unobserve(division);
+        }
+      });
+    };
+  }, []);
+
+   
+
   return (
     <>
       <div className="stack" id="stack">
@@ -12,7 +46,7 @@ export default function Stack() {
         </h3>
         <br />
         <div className="skills">
-          <div className="division">
+          <div className="division"  ref={(el) => (divisionsRef.current[0] = el)}>
                 <div class="skillBar">
                 <h4>Html</h4>
                 <div class="skillBarContainer">
@@ -57,7 +91,7 @@ export default function Stack() {
             </div>
          
  
-         <div className="division">
+         <div className="division"  ref={(el) => (divisionsRef.current[1] = el)}>
             <div class="skillBar">
                     <h4>JavaScript</h4>
                     <div class="skillBarContainer">

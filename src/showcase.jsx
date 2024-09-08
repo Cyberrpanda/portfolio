@@ -60,6 +60,8 @@ export default function Showcase() {
     ]
   };
 
+  
+
   return (
     <>
       <div className="show" id="showcase">
@@ -68,7 +70,7 @@ export default function Showcase() {
         </h3>
         <br />
         <br />
-        <div className="slides">
+        <div className="slides ">
            <div className="slider-container">
         <Slider {...settings}>
           <div>

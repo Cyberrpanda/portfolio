@@ -206,6 +206,17 @@ header .nav-btn {
   padding-left: 200px;
 }
 
+.content {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 3s ease-out, transform 0.5s ease-out;
+}
+
+.content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .content img {
   padding: 28px;
 }
@@ -223,6 +234,16 @@ header .nav-btn {
   background-color: rgb(18, 35, 64);
   height: auto;
   width: 500px;
+  text-align: left;
+  padding: 50px 40px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.ecards{
+  background-color: rgb(18, 35, 64);
+  height: auto;
+  width: 600px;
   text-align: left;
   padding: 50px 40px;
   border-top-left-radius: 5px;
@@ -269,6 +290,17 @@ header .nav-btn {
 .division {
   flex: 1;
   min-width: 200px;
+}
+
+.division {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 3s ease-out, transform 0.5s ease-out;
+}
+
+.division.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .skillBar {
@@ -518,17 +550,18 @@ header .nav-btn {
   color: #213739;
   height: auto;
   width: 100%;
-  overflow-x: visible;
-  position: relative;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
 }
 
 .footcontent {
-  padding: 35px;
+  flex: 1 1 20%; /* Flexible resizing */
+  margin: 10px;
 }
 
-h3 {
-  animation: bounce;
-  animation-duration: 3s;
+exempt{
+  flex: 1 1 30%;
 }
 
 
@@ -625,9 +658,9 @@ h3 {
     width: 100%;
   }
 
-  .exempt{
-    display: none;
-  }
+  
+
+  
 
 }
 @media only screen and (max-width: 820px) {
@@ -722,9 +755,8 @@ h3 {
     width: 100%;
   }
 
-  .exempt{
-    display: none;
-  }
+  
+  
 
 }
 @media only screen and (max-width: 768px) {
@@ -820,14 +852,17 @@ h3 {
   
   }
 
-  .exempt{
-    display: none;
+  .footer {
+    flex-direction: row;
   }
 
-  footer {
-    height: auto;
-    overflow: visible;
+  .footcontent {
+    flex: 1 1 45%;
   }
+
+  
+
+  
 }
 
 
@@ -912,6 +947,7 @@ h3 {
 
   .cards,
   .cardsx,
+  .ecards,
   .id-picture,
   .slides img {
     width: 100%; /* Ensure these elements are responsive */
@@ -962,12 +998,14 @@ h3 {
     padding: 20px; /* Add padding for better spacing */
     text-align: center; /* Center the text */
     width: 100%; /* Ensure the footer takes up full width */
-    overflow-x: hidden; /* Prevent horizontal overflow */
+    overflow-x: visible; /* Prevent horizontal overflow */
+    height: auto;
   }
 
   .footcontent {
     padding: 20px; /* Adjust padding for mobile view */
-    width: 100%; /* Make sure the content is responsive */
+    width: 100%; 
+    height: auto;
   }
 
   .footcontent ul {
@@ -983,6 +1021,10 @@ h3 {
     color: #213739; /* Keep the text color consistent */
     text-decoration: none; /* Remove underline */
     display: block; /* Make links easier to tap */
+  }
+
+  .exempt{
+    display: none;
   }
 }
 
@@ -1066,6 +1108,7 @@ h3 {
 
   .cards,
   .cardsx,
+  .ecards,
   .id-picture,
   .slides img {
     width: 100%; /* Ensure these elements are responsive */
@@ -1116,7 +1159,7 @@ h3 {
     padding: 20px; /* Add padding for better spacing */
     text-align: center; /* Center the text */
     width: 100%; /* Ensure the footer takes up full width */
-    overflow-x: hidden; /* Prevent horizontal overflow */
+    overflow-x: visible; /* Prevent horizontal overflow */
   }
 
   .footcontent {
@@ -1137,6 +1180,10 @@ h3 {
     color: #213739; /* Keep the text color consistent */
     text-decoration: none; /* Remove underline */
     display: block; /* Make links easier to tap */
+  }
+
+  .exempt{
+    display: none;
   }
 }
 
@@ -1220,6 +1267,7 @@ h3 {
 
   .cards,
   .cardsx,
+  .ecards,
   .id-picture,
   .slides img {
     width: 100%; /* Ensure these elements are responsive */
@@ -1291,5 +1339,9 @@ h3 {
     color: #213739; /* Keep the text color consistent */
     text-decoration: none; /* Remove underline */
     display: block; /* Make links easier to tap */
+  }
+
+  .exempt{
+    display: none;
   }
 }
