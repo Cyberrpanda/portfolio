@@ -15,7 +15,7 @@ export default function Showcase() {
     speed: 500,
     responsive:[
       {
-        breakpoint: 1024,
+        breakpoint: 1050,
         settings:{
           slidesToShow: 1,
           centerMode: true,
