@@ -84,7 +84,9 @@ export default function Showcase() {
             </a>
           </div>
           <div>
+            <a href="https://ventures-by8n.onrender.com">
             <img src="../ventures.png" alt="m3" />
+            </a>
           </div>
           <div>
             <img src="../heavy.png" alt="m4" />
