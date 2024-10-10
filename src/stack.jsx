@@ -69,6 +69,13 @@ export default function Stack() {
                 </div>
 
                 <div class="skillBar">
+                <h4>Tailwind</h4>
+                <div class="skillBarContainer">
+                    <div class="skillBarValue value-90"></div>
+                </div>
+                </div>
+
+                <div class="skillBar">
                 <h4>ReactJs</h4>
                 <div class="skillBarContainer">
                     <div class="skillBarValue value-70"></div>
