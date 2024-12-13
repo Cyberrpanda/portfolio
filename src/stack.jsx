@@ -135,7 +135,7 @@ export default function Stack() {
                 </div>
 
                 <div class="skillBar">
-                    <h4>Google Maps Api</h4>
+                    <h4>TypeScript</h4>
                     <div class="skillBarContainer">
                     <div class="skillBarValue value-80"></div>
                     </div>
