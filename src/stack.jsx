@@ -76,17 +76,17 @@ export default function Stack() {
                 </div>
 
                 <div class="skillBar">
-                <h4>ReactJs</h4>
+                <h4>SCSS/SASS</h4>
                 <div class="skillBarContainer">
-                    <div class="skillBarValue value-70"></div>
+                    <div class="skillBarValue value-80"></div>
                 </div>
                 </div>
 
                 <div class="skillBar">
-                    <h4>MongoDB</h4>
-                    <div class="skillBarContainer">
-                    <div class="skillBarValue value-30"></div>
-                    </div>
+                <h4>ReactJs</h4>
+                <div class="skillBarContainer">
+                    <div class="skillBarValue value-70"></div>
+                </div>
                 </div>
 
                 <div class="skillBar">
@@ -107,23 +107,9 @@ export default function Stack() {
                 </div>
 
                 <div class="skillBar">
-                    <h4>NodeJs</h4>
-                    <div class="skillBarContainer">
-                    <div class="skillBarValue value-30"></div>
-                    </div>
-                </div>
-
-                <div class="skillBar">
                     <h4>SwiperJs</h4>
                     <div class="skillBarContainer">
                     <div class="skillBarValue value-80"></div>
-                    </div>
-                </div>
-
-                <div class="skillBar">
-                    <h4>ExpressJs</h4>
-                    <div class="skillBarContainer">
-                    <div class="skillBarValue value-40"></div>
                     </div>
                 </div>
 
@@ -137,7 +123,7 @@ export default function Stack() {
                 <div class="skillBar">
                     <h4>TypeScript</h4>
                     <div class="skillBarContainer">
-                    <div class="skillBarValue value-80"></div>
+                    <div class="skillBarValue value-70"></div>
                     </div>
                 </div>
             </div>
