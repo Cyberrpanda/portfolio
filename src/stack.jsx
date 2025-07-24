@@ -85,14 +85,14 @@ export default function Stack() {
                 <div class="skillBar">
                 <h4>ReactJs</h4>
                 <div class="skillBarContainer">
-                    <div class="skillBarValue value-70"></div>
+                    <div class="skillBarValue value-80"></div>
                 </div>
                 </div>
 
                 <div class="skillBar">
                     <h4>Git/GitHub</h4>
                     <div class="skillBarContainer">
-                    <div class="skillBarValue value-70"></div>
+                    <div class="skillBarValue value-80"></div>
                     </div>
                 </div>
             </div>
@@ -102,7 +102,7 @@ export default function Stack() {
             <div class="skillBar">
                     <h4>JavaScript</h4>
                     <div class="skillBarContainer">
-                    <div class="skillBarValue value-20"></div>
+                    <div class="skillBarValue value-70"></div>
                     </div>
                 </div>
 
