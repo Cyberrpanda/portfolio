@@ -50,14 +50,14 @@ export default function Stack() {
                 <div class="skillBar">
                 <h4>Html</h4>
                 <div class="skillBarContainer">
-                    <div class="skillBarValue value-90"></div>
+                    <div class="skillBarValue value-100"></div>
                 </div>
                 </div>
 
                 <div class="skillBar">
                 <h4>Css3</h4>
                 <div class="skillBarContainer">
-                    <div class="skillBarValue value-90"></div>
+                    <div class="skillBarValue value-100"></div>
                 </div>
                 </div>
 
@@ -78,21 +78,21 @@ export default function Stack() {
                 <div class="skillBar">
                 <h4>SCSS/SASS</h4>
                 <div class="skillBarContainer">
-                    <div class="skillBarValue value-80"></div>
+                    <div class="skillBarValue value-90"></div>
                 </div>
                 </div>
 
                 <div class="skillBar">
                 <h4>ReactJs</h4>
                 <div class="skillBarContainer">
-                    <div class="skillBarValue value-70"></div>
+                    <div class="skillBarValue value-85"></div>
                 </div>
                 </div>
 
                 <div class="skillBar">
                     <h4>Git/GitHub</h4>
                     <div class="skillBarContainer">
-                    <div class="skillBarValue value-70"></div>
+                    <div class="skillBarValue value-85"></div>
                     </div>
                 </div>
             </div>
@@ -102,7 +102,7 @@ export default function Stack() {
             <div class="skillBar">
                     <h4>JavaScript</h4>
                     <div class="skillBarContainer">
-                    <div class="skillBarValue value-20"></div>
+                    <div class="skillBarValue value-85"></div>
                     </div>
                 </div>
 
@@ -123,7 +123,7 @@ export default function Stack() {
                 <div class="skillBar">
                     <h4>TypeScript</h4>
                     <div class="skillBarContainer">
-                    <div class="skillBarValue value-70"></div>
+                    <div class="skillBarValue value-80"></div>
                     </div>
                 </div>
             </div>
