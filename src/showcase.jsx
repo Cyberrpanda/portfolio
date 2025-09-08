@@ -75,26 +75,26 @@ export default function Showcase() {
         <Slider {...settings}>
           <div>
             <a href="https://medibridge-ty1l.onrender.com">
-            <img src="../medibridge.png" alt="m1" />
+            <img src="../medibridge.webp" alt="m1" />
             </a>
           </div>
           <div>
             <a href="https://tunken-project.onrender.com">
-            <img src="../tunken.png" alt="m2" />
+            <img src="../tunken.webp" alt="m2" />
             </a>
           </div>
           <div>
             <a href="https://ventures-by8n.onrender.com">
-            <img src="../ventures.png" alt="m3" />
+            <img src="../ventures.webp" alt="m3" />
             </a>
           </div>
           <div>
             <a href="https://heavy-locomotive.onrender.com">
-            <img src="../heavy.png" alt="m4" />
+            <img src="../heavy.webp" alt="m4" />
             </a>
           </div>
           <div>
-            <img src="../tickfare.png" alt="m5" />
+            <img src="../thearchive.webp" alt="m5" />
           </div>
           
         </Slider>
