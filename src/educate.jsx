@@ -35,7 +35,7 @@ export default function Educate(){
     return(
         <>
         <div className="educate">
-                <h3>
+                <h3 className="educate-title">
                 <i>EDUCATION</i>
                 </h3>
                 <br />
@@ -78,7 +78,8 @@ export default function Educate(){
                         </div>
                     </div>
                 </div>    
-          
+                <br />
+                <br />
                 <h3>
                 <i>PUBLICATIONS</i>
                 </h3>
@@ -97,7 +98,7 @@ export default function Educate(){
                 </iframe>
                 <p>Certificate of Publication - Issued by International Journal <br /> of Scientific Research and Engineering Development (IJSRED)</p>
                 </div>
-
+                
         </div>
         </>
     )

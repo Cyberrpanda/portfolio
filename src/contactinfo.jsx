@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <>
       <div className="contact" id="contactinfo">
-        <h3>
+        <h3 className="educate-title">
           <i>GET IN TOUCH</i>
         </h3>
         <br />
