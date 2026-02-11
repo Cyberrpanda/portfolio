@@ -1,105 +1,105 @@
-import { useEffect } from "react";
-import "./index.css";
+// Educate.jsx
+import React, { useEffect, useRef } from "react";
 
-export default function Educate(){
-    
-    useEffect(() => {
-        const cards = document.querySelectorAll(".ecards");
-    
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("slide-in-left-active");
-              }
-            });
-          },
-          {
-            threshold: 0.2, // Adjust this value based on when you want the animation to trigger
+export default function Educate() {
+  const cardsRef = useRef([]);
+
+  // Intersection Observer for slide‑in animation
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("opacity-100", "translate-x-0");
+            entry.target.classList.remove("opacity-0", "-translate-x-8");
           }
-        );
-    
-        cards.forEach((card) => {
-          observer.observe(card);
         });
-    
-        return () => {
-          cards.forEach((card) => {
-            observer.unobserve(card);
-          });
-        };
-      }, []);
-    
+      },
+      { threshold: 0.2 }
+    );
 
+    cardsRef.current.forEach((card) => {
+      if (card) observer.observe(card);
+    });
 
-    return(
-        <>
-        <div className="educate">
-                <h3 className="educate-title">
-                <i>EDUCATION</i>
-                </h3>
-                <br />
-                <br />
-                <div className="exp">
-                    <div className="containers details">
-                        <div className="ecards slide-in-left">
-                        <div className="card-heads">
-                        <h5>NIIT LIMITED</h5>
+    return () => {
+      cardsRef.current.forEach((card) => {
+        if (card) observer.unobserve(card);
+      });
+    };
+  }, []);
 
-                        <small className="date">2023</small>
-                        </div>    
-                        
-                          <small>Student Intern</small>
+  return (
+    <section id="educate" className="bg-slate-900 text-white py-24 px-6 md:px-12">
+      <div className="max-w-6xl mx-auto">
+        {/* Education Section */}
+        <h3 className="text-4xl md:text-5xl font-bold text-center mb-16 text-blue-500">
+          EDU<span className="text-white">CATION</span>
+        </h3>
 
-                          
+        <div className="grid md:grid-cols-2 gap-8 mb-24">
+          {/* Card 1 – NIIT */}
+          <div
+            ref={(el) => (cardsRef.current[0] = el)}
+            className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 opacity-0 -translate-x-8"
+          >
+            <div className="flex justify-between items-start mb-4">
+              <h5 className="text-xl font-bold text-blue-400">NIIT LIMITED</h5>
+              <span className="text-sm text-slate-400 bg-slate-700/50 px-3 py-1 rounded-full">
+                2023
+              </span>
+            </div>
+            <p className="text-slate-300 text-sm uppercase tracking-wide mb-4">
+              Student Intern
+            </p>
+            <p className="text-slate-400 leading-relaxed">
+              I began my Web Development journey here, studying to earn a
+              certification in Web Design and Development.
+            </p>
+          </div>
 
-                          <br /><br />
-                          <p>
-                          I began my Web Development journey here studying to earn a certification in Web Design and Development.
-                          </p>
-                        </div>
-                    </div>
-
-                    <div className="containers details">
-                        <div className="ecards slide-in-left">
-                         <div className="card-heads">
-                         <h5>BSC. COMPUTER SCIENCE</h5>
-                         <small className="date">2021 - 2024</small>
-                        </div>   
-                       
-                          <small>Babcock University</small>
-                          
-                          
-
-                          <br /><br />
-                          <p>
-                          I was able to achieve a childhood dream of Studying and Graduating with a degree in Computer Science , a course that believe it or not i've had a desire to study since my early primary education. I was fascinated by technology and knew from then that this was a field i could see myself in. While in school i was able to publish a paper on a topic of interest in the IJSRED Journal, work on some fun projects.   
-                          </p>
-                        </div>
-                    </div>
-                </div>    
-                <br />
-                <br />
-                <h3>
-                <i>PUBLICATIONS</i>
-                </h3>
-                <br />
-                <br />
-                <div className="certificate ">
-                <iframe className=""
-                    src="https://drive.google.com/file/d/1WSjDfJPJi9j4gfC_JhybkM2nKLKZw5ZM/preview
-"
-                    width="640"
-                    height="450"
-                    allow="autoplay"
-                    title="Certificate PDF"
-                    style={{ border: "none" }}>
-
-                </iframe>
-                <p>Certificate of Publication - Issued by International Journal <br /> of Scientific Research and Engineering Development (IJSRED)</p>
-                </div>
-                
+          {/* Card 2 – Babcock University */}
+          <div
+            ref={(el) => (cardsRef.current[1] = el)}
+            className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 opacity-0 -translate-x-8 delay-200"
+          >
+            <div className="flex justify-between items-start mb-4">
+              <h5 className="text-xl font-bold text-blue-400">
+                BSC. COMPUTER SCIENCE
+              </h5>
+              <span className="text-sm text-slate-400 bg-slate-700/50 px-3 py-1 rounded-full">
+                2021 - 2024
+              </span>
+            </div>
+            <p className="text-slate-300 text-sm uppercase tracking-wide mb-4">
+              Babcock University
+            </p>
+            <p className="text-slate-400 leading-relaxed">
+              Achieved a childhood dream of studying and graduating with a degree
+              in Computer Science. Fascinated by technology since primary school.
+              Published a paper in the IJSRED Journal and worked on several fun
+              projects.
+            </p>
+          </div>
         </div>
-        </>
-    )
+
+        {/* Publications Section */}
+        <h3 className="text-4xl md:text-5xl font-bold text-center mb-16 text-blue-500">
+          PUBLI<span className="text-white">CATIONS</span>
+        </h3>
+
+        <div className="max-w-4xl mx-auto">
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-700 bg-slate-800/30">
+            <div className="aspect-video">
+              <iframe src="/certificate.pdf" className="w-full h-full" />
+            </div>
+          </div>
+          <p className="text-center text-slate-400 mt-6 text-sm md:text-base">
+            Certificate of Publication – Issued by International Journal of
+            Scientific Research and Engineering Development (IJSRED)
+          </p>
+        </div>
+      </div>
+    </section>
+  );
 }
