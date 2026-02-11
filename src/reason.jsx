@@ -3,12 +3,13 @@ import React, { useEffect, useRef } from "react";
 import {
   FaCheck,
   FaTrophy,
+  FaFileContract,
+  FaTools,
+  FaMapMarkerAlt,
   FaCloud,
   FaCogs,
   FaBox,
   FaChartLine,
-  FaFileContract,
-  FaTools,
   FaUsers,
   FaSearch,
   FaFileInvoiceDollar,
@@ -45,73 +46,91 @@ export default function Reason() {
   const experiences = [
     {
       id: 1,
-      date: "JUN 2025 – PRESENT",
-      title: "IT Operations Specialist",
-      company: "EKO ELECTRICITY DISTRIBUTION PLC",
+      date: "06/2025 – Present",
+      title: "IT Operations",
+      company: "Eko Electricity Distribution Plc",
+      location: "24/25 Marina Rd, Lagos Island, Nigeria",
       type: "Full-time",
       icon: <FaFileContract className="mr-2" />,
       responsibilities: [
-        "Manage and support IT infrastructure including servers, networks, and critical applications (billing, smart meter systems, SCADA, GIS)",
-        "Provide technical support, maintain system security, and ensure operational continuity",
-        "Support data backup and recovery, resolve user issues, and contribute to IT efficiency",
+        "Successfully deployed and configured scanner drivers and enterprise scan utilities (including HP ScanJet), improving document processing reliability and reducing scan-related support tickets.",
+        "Standardised software installation and updates across laptops and desktops in line with internal IT policies, increasing system stability and reducing configuration errors.",
+        "Resolved recurring hardware and boot issues (RAM detection failures, display faults, and boot loader errors), restoring devices to operational status and minimising user downtime.",
+        "Improved user productivity by efficiently resolving account access issues, including password resets and login failures.",
+        "Streamlined device onboarding by installing operating systems, configuring domain access, and deploying required applications, ensuring new users were operational on day one.",
+        "Executed advanced diagnostics and system repairs (BIOS validation, disk/file system recovery, and Windows boot loader restoration), preventing unnecessary device replacements.",
+        "Enhanced asset management accuracy by validating device model and serial numbers using WMIC queries, supporting reliable inventory and audit processes.",
+        "Collaborated with third party vendors to coordinate device repairs and preventive maintenance, reducing turnaround time for faulty equipment and improving device availability.",
+        "Partnered closely with the administrative store team to manage staff device issuance by assessing device condition and accurately classifying equipment as functional or obsolete, improving inventory efficiency and minimising the deployment of faulty devices.",
       ],
       achievements: [
-        "Improved system uptime through proactive monitoring and rapid incident response",
-        "Streamlined IT support workflows reducing average resolution time",
-        "Assisted in successful deployment of smart meter integration across multiple districts",
+        "Reduced scan-related support tickets by ~30% through proactive driver deployment.",
+        "Cut device onboarding time by 50% with streamlined OS installation and domain configuration.",
+        "Prevented unnecessary hardware replacements valued at over ₦2M through advanced diagnostics and repairs.",
       ],
-      skills: ["SCADA", "GIS", "Billing Systems", "Network Security"],
+      skills: [
+        "Hardware Diagnostics",
+        "Windows OS",
+        "Driver Deployment",
+        "Asset Management",
+        "Vendor Coordination",
+        "WMIC",
+        "BIOS",
+        "System Recovery",
+      ],
     },
     {
       id: 2,
-      date: "SEP 2023 – OCT 2023",
-      title: "Freelancer",
-      company: "TUNKEN ELEVATORS",
+      date: "09/2023 – 10/2023",
+      title: "Front-End Developer",
+      company: "Tunken Elevators",
+      location: "Lagos, Nigeria",
       type: "Contract",
       icon: <FaFileContract className="mr-2" />,
       responsibilities: [
-        "Developed a fully responsive company website using HTML and Bootstrap CSS",
-        "Collaborated with client to refine UI/UX, ensuring seamless user experience",
-        "Provided support and recommendations for website optimization and performance",
+        "Designed and developed a fully responsive company website using HTML and Bootstrap CSS to showcase core services, improving online visibility and user accessibility.",
+        "Worked closely with the client to refine UI/UX design and user flows, delivering a smooth, intuitive browsing experience.",
+        "Provided ongoing optimization recommendations and technical support, enhancing site performance and overall usability.",
       ],
       achievements: [
-        "Delivered project ahead of schedule with 100% client satisfaction",
-        "Improved mobile responsiveness and page load speed by 40%",
+        "Delivered the project ahead of schedule with 100% client satisfaction.",
+        "Improved mobile responsiveness and page load speed by over 40%.",
       ],
-      skills: ["HTML", "Bootstrap", "UI/UX", "Responsive Design"],
+      skills: ["HTML", "Bootstrap", "UI/UX", "Responsive Design", "Client Collaboration"],
       projects: [
         {
           icon: <FaCloud />,
           name: "Corporate Website Redesign",
           description:
-            "Modern, mobile‑first website showcasing elevator products and services",
+            "Modern, mobile‑first website showcasing elevator products and services.",
         },
       ],
     },
     {
       id: 3,
-      date: "JAN 2023 – JUN 2023",
-      title: "Student Intern",
-      company: "NIIT LIMITED",
+      date: "01/2023 – 06/2023",
+      title: "Web Development Intern",
+      company: "NIIT Limited",
+      location: "Awolowo Road, Ikeja, Lagos, Nigeria",
       type: "Internship",
       icon: <FaTools className="mr-2" />,
       responsibilities: [
-        "Built multiple projects including a car dealership site, travel agency site, and portfolio iterations",
-        "Learned and applied modern web technologies (HTML, CSS, JavaScript, React basics)",
-        "Collaborated with peers on group assignments and code reviews",
+        "Completed a six-month frontend development internship, gaining hands-on experience building production-style web applications.",
+        "Developed multiple web projects including a car dealership site, a travel agency website, and a personal portfolio using React.js and Bootstrap CSS, demonstrating versatility across business domains.",
+        "Improved problem-solving and debugging skills by resolving UI/UX issues in real-world scenarios, contributing to more polished and user-friendly interfaces.",
       ],
       achievements: [
-        "Successfully completed 6‑month intensive training program",
-        "Received recognition for outstanding project work",
+        "Successfully delivered 3 complete web projects during the internship.",
+        "Received recognition from mentors for exceptional UI implementation.",
       ],
-      skills: ["HTML", "CSS", "JavaScript", "React", "Responsive Design"],
+      skills: ["React.js", "Bootstrap", "HTML", "CSS", "JavaScript", "Debugging", "UI/UX"],
     },
   ];
 
   return (
     <section id="reason" className="relative bg-slate-900 text-white py-24 px-6 md:px-12 overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        {/* Section Header – inspired by reference */}
+        {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
             <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-700 mx-auto rounded-full"></div>
@@ -120,7 +139,7 @@ export default function Reason() {
             Professional <span className="text-blue-500">Experience</span>
           </h2>
           <p className="text-xl text-slate-400 max-w-3xl mx-auto">
-            A journey through diverse roles in IT operations, freelance development, and hands‑on learning
+            A journey through IT operations, freelance development, and hands‑on web development training
           </p>
         </div>
 
@@ -139,7 +158,7 @@ export default function Reason() {
                 style={{ transitionDelay: `${index * 200}ms` }}
               >
                 <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
-                  {/* Left Column – Alternating: details (odd) / card (even) */}
+                  {/* Alternating layout */}
                   {index % 2 === 0 ? (
                     <>
                       {/* Left: Job Details */}
@@ -149,6 +168,10 @@ export default function Reason() {
                         </div>
                         <h3 className="text-2xl font-bold text-white mb-3">{exp.title}</h3>
                         <p className="text-blue-400 font-semibold text-lg">{exp.company}</p>
+                        <div className="mt-2 flex items-center lg:justify-end text-slate-400">
+                          <FaMapMarkerAlt className="mr-2 text-blue-400" />
+                          <span className="text-sm">{exp.location}</span>
+                        </div>
                         <div className="mt-4 flex items-center lg:justify-end text-slate-400">
                           <span className="flex items-center">
                             {exp.icon}
@@ -211,13 +234,18 @@ export default function Reason() {
                             <div className="mt-6">
                               <h4 className="font-bold text-white mb-3 text-lg">Key Projects</h4>
                               {exp.projects.map((project, i) => (
-                                <div key={i} className="flex items-start bg-slate-700/30 p-4 rounded-xl border border-slate-700">
+                                <div
+                                  key={i}
+                                  className="flex items-start bg-slate-700/30 p-4 rounded-xl border border-slate-700"
+                                >
                                   <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center mr-3">
                                     <div className="text-blue-400">{project.icon}</div>
                                   </div>
                                   <div>
                                     <span className="font-medium text-white">{project.name}</span>
-                                    <p className="text-slate-400 text-sm mt-1">{project.description}</p>
+                                    <p className="text-slate-400 text-sm mt-1">
+                                      {project.description}
+                                    </p>
                                   </div>
                                 </div>
                               ))}
@@ -227,7 +255,7 @@ export default function Reason() {
                       </div>
                     </>
                   ) : (
-                    // Alternating layout – swap sides
+                    // Alternating layout – swap sides (for future roles if added)
                     <>
                       {/* Left: Card with responsibilities & achievements */}
                       <div className="lg:text-right lg:pr-12 mb-8 lg:mb-0 relative">
@@ -245,7 +273,9 @@ export default function Reason() {
                                 <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500/10 flex items-center justify-center lg:ml-3 mt-0.5">
                                   <FaCheck className="text-blue-400 text-xs" />
                                 </div>
-                                <span className="text-slate-300 text-sm md:text-base lg:text-right">{item}</span>
+                                <span className="text-slate-300 text-sm md:text-base lg:text-right">
+                                  {item}
+                                </span>
                               </li>
                             ))}
                           </ul>
@@ -260,7 +290,9 @@ export default function Reason() {
                                 <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500/10 flex items-center justify-center lg:ml-3 mt-0.5">
                                   <FaTrophy className="text-yellow-500 text-xs" />
                                 </div>
-                                <span className="text-slate-300 text-sm md:text-base lg:text-right">{item}</span>
+                                <span className="text-slate-300 text-sm md:text-base lg:text-right">
+                                  {item}
+                                </span>
                               </li>
                             ))}
                           </ul>
@@ -274,6 +306,10 @@ export default function Reason() {
                         </div>
                         <h3 className="text-2xl font-bold text-white mb-3">{exp.title}</h3>
                         <p className="text-blue-400 font-semibold text-lg">{exp.company}</p>
+                        <div className="mt-2 flex items-center text-slate-400">
+                          <FaMapMarkerAlt className="mr-2 text-blue-400" />
+                          <span className="text-sm">{exp.location}</span>
+                        </div>
                         <div className="mt-4 flex items-center text-slate-400">
                           <span className="flex items-center">
                             {exp.icon}

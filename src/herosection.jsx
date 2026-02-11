@@ -1,7 +1,7 @@
 // HeroSection.jsx
 import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
-import { FaPaperPlane, FaChartLine, FaCheck, FaChevronDown } from "react-icons/fa";
+import { FaPaperPlane, FaChartLine, FaDownload, FaCheck, FaChevronDown } from "react-icons/fa";
 
 export default function HeroSection() {
   return (
@@ -18,17 +18,13 @@ export default function HeroSection() {
               <span className="block text-blue-500">Balogun</span>
             </h1>
             <p className="text-2xl text-slate-300 mb-8 font-light">
-              Front‑end Engineer | React Specialist | UI/UX Enthusiast | Full‑stack (in progress)
+              Front‑end Developer
             </p>
             <p className="text-slate-400 mb-10 text-lg leading-relaxed">
-              I'm a front‑end software engineer with a Computer Science degree and a passion for building
-              beautiful, responsive web experiences. I've delivered multiple projects using React, Tailwind,
-              and modern JavaScript. Currently expanding into backend development to become a versatile
-              full‑stack engineer. I love solving problems, learning new technologies, and turning ideas
-              into reality.
+              I am a highly skilled Front-End Developer specializing in building scalable, responsive web applications using React Js, TypeScript, and modern styling frameworks like Tailwind and SCSS. My technical foundation is built on deep proficiency in HTML, CSS, and JavaScript, with a strong emphasis on Responsive Web Design, seamless API Integration, and User Acceptance Testing (UAT) to ensure high-quality, user-centric products. I am adept at managing the development lifecycle through Version Control (Git) and possess robust data management capabilities using PostgreSQL and MySQL Workbench. What truly distinguishes my profile is a unique "systems-first" perspective gained from extensive IT Operations experience; I bring advanced Problem Solving and Debugging skills that extend beyond the browser into BIOS-level diagnostics, disk/file system recovery, and Windows boot loader restoration. This rare combination of front-end mastery and infrastructure depth—ranging from OS deployment and WMIC queries to resolving hardware failures like RAM and display faults—enables me to engineer stable, high-performance solutions with a comprehensive understanding of the entire technical stack.
             </p>
 
-            {/* CTA Buttons */}
+            {/* CTA Buttons – three buttons now */}
             <div className="flex flex-wrap gap-4 mb-12">
               <Link
                 smooth
@@ -49,6 +45,16 @@ export default function HeroSection() {
                   <FaChartLine className="text-sm" /> View My Work
                 </span>
               </Link>
+              {/* Download CV Button – added */}
+              <a
+                href="/ITHIEL-BALOGUN-RESUME 2026.docx"
+                download
+                className="group relative inline-flex items-center justify-center px-8 py-4 font-semibold text-white transition-all duration-300 bg-slate-800 border border-slate-700 rounded-full shadow-lg hover:bg-slate-700 hover:border-blue-500/50 hover:scale-105 overflow-hidden"
+              >
+                <span className="relative flex items-center gap-2">
+                  <FaDownload className="text-sm" /> Download CV
+                </span>
+              </a>
             </div>
 
             {/* Stats */}
