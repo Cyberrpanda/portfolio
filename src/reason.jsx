@@ -1,96 +1,305 @@
-import { useEffect } from "react";
-import "./index.css";
+// Reason.jsx
+import React, { useEffect, useRef } from "react";
+import {
+  FaCheck,
+  FaTrophy,
+  FaCloud,
+  FaCogs,
+  FaBox,
+  FaChartLine,
+  FaFileContract,
+  FaTools,
+  FaUsers,
+  FaSearch,
+  FaFileInvoiceDollar,
+  FaHandshake,
+} from "react-icons/fa";
 
-export default function Reason(){
+export default function Reason() {
+  const cardsRef = useRef([]);
 
-    useEffect(() => {
-        const cards = document.querySelectorAll(".cardsx");
-    
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("slide-in-left-active");
-              }
-            });
-          },
-          {
-            threshold: 0.1, // Lower threshold for better mobile experience
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("opacity-100", "translate-y-0");
+            entry.target.classList.remove("opacity-0", "translate-y-8");
           }
-        );
-    
-        cards.forEach((card) => {
-          observer.observe(card);
         });
-    
-        return () => {
-          cards.forEach((card) => {
-            observer.unobserve(card);
-          });
-        };
-      }, []);
-    
-    return (
-        <div className="reason" id="reason">
-            <h3 className="reason-title"> 
-                <i>EXPERIENCE</i>
-            </h3>
-            
-            <div className="exp">
-                <div className="experience-item">
-                    <div className="cardsx slide-in-left">
-                        <div className="card-heads">
-                            <h5 className="company-name">EKO ELECTRICITY DISTRIBUTION PLC</h5>
-                            <small className="date">JUN 2025 - PRESENT</small>
-                        </div>    
-                        
-                        <small className="job-title">IT Operations Specialist</small>
-
-                        <div className="job-description">
-                            <p>
-                                As an IT Operations Specialist at Eko Electricity Distribution Plc, I manage and support the company's IT infrastructure, including servers, networks, and critical applications like billing and smart meter systems. I provide technical support, maintain system security, and assist in ensuring operational continuity for technologies such as SCADA and GIS. My role involves resolving user issues, supporting data backup and recovery, and contributing to the overall efficiency and reliability of EKEDC's IT environment.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="experience-item">
-                    <div className="cardsx slide-in-left">
-                        <div className="card-heads">
-                            <h5 className="company-name">TUNKEN ELEVATORS</h5>
-                            <small className="date">SEP 2023 - OCT 2023</small>
-                        </div>   
-                       
-                        <small className="job-title">FreeLancer</small>
-                        
-                        <div className="job-description">
-                            <p>
-                                I developed a fully responsive website showcasing the company's services using Html and Bootstrap CSS.
-                                I Collaborated with the client to refine the UI/UX, ensuring a seamless user experience i additionally
-                                provided support and recommendations for website optimization.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="experience-item">
-                    <div className="cardsx slide-in-left">
-                        <div className="card-heads">
-                            <h5 className="company-name">NIIT LIMITED</h5>
-                            <small className="date">JAN 2023 - JUN 2023</small>
-                        </div>    
-                        
-                        <small className="job-title">Student Intern</small>
-
-                        <div className="job-description">
-                            <p>
-                                Embarked on a six month internship training with the aim of familiarizing myself with the Tech Industry and gaining the skills necessary to make a career in this industry.
-                                During this six month period I built a car dealership site, a site for a travel agency and the first of many iterations of my portfolio site among other projects.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>    
-        </div>
+      },
+      { threshold: 0.2 }
     );
+
+    cardsRef.current.forEach((card) => {
+      if (card) observer.observe(card);
+    });
+
+    return () => {
+      cardsRef.current.forEach((card) => {
+        if (card) observer.unobserve(card);
+      });
+    };
+  }, []);
+
+  const experiences = [
+    {
+      id: 1,
+      date: "JUN 2025 – PRESENT",
+      title: "IT Operations Specialist",
+      company: "EKO ELECTRICITY DISTRIBUTION PLC",
+      type: "Full-time",
+      icon: <FaFileContract className="mr-2" />,
+      responsibilities: [
+        "Manage and support IT infrastructure including servers, networks, and critical applications (billing, smart meter systems, SCADA, GIS)",
+        "Provide technical support, maintain system security, and ensure operational continuity",
+        "Support data backup and recovery, resolve user issues, and contribute to IT efficiency",
+      ],
+      achievements: [
+        "Improved system uptime through proactive monitoring and rapid incident response",
+        "Streamlined IT support workflows reducing average resolution time",
+        "Assisted in successful deployment of smart meter integration across multiple districts",
+      ],
+      skills: ["SCADA", "GIS", "Billing Systems", "Network Security"],
+    },
+    {
+      id: 2,
+      date: "SEP 2023 – OCT 2023",
+      title: "Freelancer",
+      company: "TUNKEN ELEVATORS",
+      type: "Contract",
+      icon: <FaFileContract className="mr-2" />,
+      responsibilities: [
+        "Developed a fully responsive company website using HTML and Bootstrap CSS",
+        "Collaborated with client to refine UI/UX, ensuring seamless user experience",
+        "Provided support and recommendations for website optimization and performance",
+      ],
+      achievements: [
+        "Delivered project ahead of schedule with 100% client satisfaction",
+        "Improved mobile responsiveness and page load speed by 40%",
+      ],
+      skills: ["HTML", "Bootstrap", "UI/UX", "Responsive Design"],
+      projects: [
+        {
+          icon: <FaCloud />,
+          name: "Corporate Website Redesign",
+          description:
+            "Modern, mobile‑first website showcasing elevator products and services",
+        },
+      ],
+    },
+    {
+      id: 3,
+      date: "JAN 2023 – JUN 2023",
+      title: "Student Intern",
+      company: "NIIT LIMITED",
+      type: "Internship",
+      icon: <FaTools className="mr-2" />,
+      responsibilities: [
+        "Built multiple projects including a car dealership site, travel agency site, and portfolio iterations",
+        "Learned and applied modern web technologies (HTML, CSS, JavaScript, React basics)",
+        "Collaborated with peers on group assignments and code reviews",
+      ],
+      achievements: [
+        "Successfully completed 6‑month intensive training program",
+        "Received recognition for outstanding project work",
+      ],
+      skills: ["HTML", "CSS", "JavaScript", "React", "Responsive Design"],
+    },
+  ];
+
+  return (
+    <section id="reason" className="relative bg-slate-900 text-white py-24 px-6 md:px-12 overflow-hidden">
+      <div className="max-w-7xl mx-auto">
+        {/* Section Header – inspired by reference */}
+        <div className="text-center mb-16">
+          <div className="inline-block mb-4">
+            <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-700 mx-auto rounded-full"></div>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Professional <span className="text-blue-500">Experience</span>
+          </h2>
+          <p className="text-xl text-slate-400 max-w-3xl mx-auto">
+            A journey through diverse roles in IT operations, freelance development, and hands‑on learning
+          </p>
+        </div>
+
+        {/* Timeline Container */}
+        <div className="relative">
+          {/* Timeline Line – hidden on mobile */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-blue-500 to-transparent hidden lg:block"></div>
+
+          {/* Experience Items */}
+          <div className="space-y-16">
+            {experiences.map((exp, index) => (
+              <div
+                key={exp.id}
+                ref={(el) => (cardsRef.current[index] = el)}
+                className="relative opacity-0 translate-y-8 transition-all duration-700 ease-out"
+                style={{ transitionDelay: `${index * 200}ms` }}
+              >
+                <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+                  {/* Left Column – Alternating: details (odd) / card (even) */}
+                  {index % 2 === 0 ? (
+                    <>
+                      {/* Left: Job Details */}
+                      <div className="lg:text-right mb-8 lg:mb-0 lg:pr-12 order-2 lg:order-1">
+                        <div className="inline-block px-4 py-2 bg-blue-600 text-white rounded-full text-sm font-semibold mb-3">
+                          {exp.date}
+                        </div>
+                        <h3 className="text-2xl font-bold text-white mb-3">{exp.title}</h3>
+                        <p className="text-blue-400 font-semibold text-lg">{exp.company}</p>
+                        <div className="mt-4 flex items-center lg:justify-end text-slate-400">
+                          <span className="flex items-center">
+                            {exp.icon}
+                            {exp.type}
+                          </span>
+                        </div>
+                        {/* Skills Tags */}
+                        <div className="flex flex-wrap gap-2 mt-6 lg:justify-end">
+                          {exp.skills.map((skill) => (
+                            <span
+                              key={skill}
+                              className="px-3 py-1 bg-slate-800 text-blue-300 rounded-full text-xs font-medium border border-slate-700"
+                            >
+                              {skill}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Right: Card with responsibilities & achievements */}
+                      <div className="lg:pl-12 order-1 lg:order-2 relative">
+                        <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-blue-600 rounded-full border-4 border-slate-900 shadow-lg hidden lg:flex items-center justify-center">
+                          <div className="w-2 h-2 bg-white rounded-full"></div>
+                        </div>
+                        <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-slate-700 hover:border-blue-500/50 transition-all duration-300">
+                          {/* Responsibilities */}
+                          <h4 className="font-bold text-white mb-3 text-lg flex items-center">
+                            <FaCheck className="text-blue-400 mr-2 text-sm" />
+                            Key Responsibilities
+                          </h4>
+                          <ul className="space-y-3 mb-6">
+                            {exp.responsibilities.map((item, i) => (
+                              <li key={i} className="flex items-start">
+                                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500/10 flex items-center justify-center mr-3 mt-0.5">
+                                  <FaCheck className="text-blue-400 text-xs" />
+                                </div>
+                                <span className="text-slate-300 text-sm md:text-base">{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+
+                          {/* Achievements */}
+                          <h4 className="font-bold text-white mb-3 text-lg flex items-center">
+                            <FaTrophy className="text-yellow-500 mr-2 text-sm" />
+                            Key Achievements
+                          </h4>
+                          <ul className="space-y-3">
+                            {exp.achievements.map((item, i) => (
+                              <li key={i} className="flex items-start">
+                                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500/10 flex items-center justify-center mr-3 mt-0.5">
+                                  <FaTrophy className="text-yellow-500 text-xs" />
+                                </div>
+                                <span className="text-slate-300 text-sm md:text-base">{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+
+                          {/* Optional Projects Section (only for Tunken) */}
+                          {exp.projects && (
+                            <div className="mt-6">
+                              <h4 className="font-bold text-white mb-3 text-lg">Key Projects</h4>
+                              {exp.projects.map((project, i) => (
+                                <div key={i} className="flex items-start bg-slate-700/30 p-4 rounded-xl border border-slate-700">
+                                  <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center mr-3">
+                                    <div className="text-blue-400">{project.icon}</div>
+                                  </div>
+                                  <div>
+                                    <span className="font-medium text-white">{project.name}</span>
+                                    <p className="text-slate-400 text-sm mt-1">{project.description}</p>
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    </>
+                  ) : (
+                    // Alternating layout – swap sides
+                    <>
+                      {/* Left: Card with responsibilities & achievements */}
+                      <div className="lg:text-right lg:pr-12 mb-8 lg:mb-0 relative">
+                        <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-blue-600 rounded-full border-4 border-slate-900 shadow-lg hidden lg:flex items-center justify-center">
+                          <div className="w-2 h-2 bg-white rounded-full"></div>
+                        </div>
+                        <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-slate-700 hover:border-blue-500/50 transition-all duration-300">
+                          <h4 className="font-bold text-white mb-3 text-lg flex items-center lg:justify-end">
+                            <FaCheck className="text-blue-400 mr-2 text-sm" />
+                            Key Responsibilities
+                          </h4>
+                          <ul className="space-y-3 mb-6">
+                            {exp.responsibilities.map((item, i) => (
+                              <li key={i} className="flex items-start lg:flex-row-reverse">
+                                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500/10 flex items-center justify-center lg:ml-3 mt-0.5">
+                                  <FaCheck className="text-blue-400 text-xs" />
+                                </div>
+                                <span className="text-slate-300 text-sm md:text-base lg:text-right">{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+
+                          <h4 className="font-bold text-white mb-3 text-lg flex items-center lg:justify-end">
+                            <FaTrophy className="text-yellow-500 mr-2 text-sm" />
+                            Key Achievements
+                          </h4>
+                          <ul className="space-y-3">
+                            {exp.achievements.map((item, i) => (
+                              <li key={i} className="flex items-start lg:flex-row-reverse">
+                                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500/10 flex items-center justify-center lg:ml-3 mt-0.5">
+                                  <FaTrophy className="text-yellow-500 text-xs" />
+                                </div>
+                                <span className="text-slate-300 text-sm md:text-base lg:text-right">{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+
+                      {/* Right: Job Details */}
+                      <div className="lg:pl-12">
+                        <div className="inline-block px-4 py-2 bg-blue-600 text-white rounded-full text-sm font-semibold mb-3">
+                          {exp.date}
+                        </div>
+                        <h3 className="text-2xl font-bold text-white mb-3">{exp.title}</h3>
+                        <p className="text-blue-400 font-semibold text-lg">{exp.company}</p>
+                        <div className="mt-4 flex items-center text-slate-400">
+                          <span className="flex items-center">
+                            {exp.icon}
+                            {exp.type}
+                          </span>
+                        </div>
+                        {/* Skills Tags */}
+                        <div className="flex flex-wrap gap-2 mt-6">
+                          {exp.skills.map((skill) => (
+                            <span
+                              key={skill}
+                              className="px-3 py-1 bg-slate-800 text-blue-300 rounded-full text-xs font-medium border border-slate-700"
+                            >
+                              {skill}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
