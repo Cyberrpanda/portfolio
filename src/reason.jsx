@@ -46,7 +46,7 @@ export default function Reason() {
   const experiences = [
     {
       id: 1,
-      date: "06/2025 – Present",
+      date: "JUN 2025 – Present",
       title: "IT Operations",
       company: "Eko Electricity Distribution Plc",
       location: "24/25 Marina Rd, Lagos Island, Nigeria",
@@ -81,7 +81,7 @@ export default function Reason() {
     },
     {
       id: 2,
-      date: "09/2023 – 10/2023",
+      date: "SEP 2023 – OCT 2023",
       title: "Front-End Developer",
       company: "Tunken Elevators",
       location: "Lagos, Nigeria",
@@ -108,7 +108,7 @@ export default function Reason() {
     },
     {
       id: 3,
-      date: "01/2023 – 06/2023",
+      date: "JAN 2023 – JUN 2023",
       title: "Web Development Intern",
       company: "NIIT Limited",
       location: "Awolowo Road, Ikeja, Lagos, Nigeria",

@@ -56,22 +56,6 @@ export default function HeroSection() {
                 </span>
               </a>
             </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-500 mb-2">10+</div>
-                <div className="text-slate-400 text-sm">Projects Delivered</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-500 mb-2">4+</div>
-                <div className="text-slate-400 text-sm">Years Learning</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-500 mb-2">100%</div>
-                <div className="text-slate-400 text-sm">Client Satisfaction</div>
-              </div>
-            </div>
           </div>
 
           {/* Right Column – Profile Image with Badge */}
